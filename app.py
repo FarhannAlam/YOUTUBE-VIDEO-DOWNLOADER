@@ -6,7 +6,7 @@ import glob
 app = Flask(__name__)
 
 DOWNLOAD_DIR = 'downloads'
-
+os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 @app.route('/')
 def index():
     return render_template('index.html')
